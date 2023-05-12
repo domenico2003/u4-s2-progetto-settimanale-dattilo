@@ -28,7 +28,7 @@ public class catalogoMain {
 
 		// leggo dal disco
 
-		// archivioPublicazioni.leggiDalDisco();
+		archivioPublicazioni.leggiDalDisco();
 
 		// aggiungo articoli
 
@@ -46,7 +46,9 @@ public class catalogoMain {
 //		per eliminare un elemento inserire elementoDaEliminare.GetISBN() poichè gli ISBN sono randomici e a ogni run cambiano o se si legge dal disco inserire l'isbn
 
 		System.out.println("ELIMINAZIONE ELEMENTO");
-		archivioPublicazioni.rimuoviElementoByIsbn(test1.getISBN());
+		archivioPublicazioni.rimuoviElementoByIsbn("979-87-78720-46-1");
+		archivioPublicazioni.rimuoviElementoByIsbn(test1.getISBN());// rimuove senza lettura dal disco, funziona anche
+																	// con lettura dal disco!funziona
 		archivioPublicazioni.StampaArchivio();
 
 		System.out.println();
@@ -59,7 +61,8 @@ public class catalogoMain {
 
 		System.out.println("ricerca per ISBN");
 //		archivioPublicazioni.cercaElemento("978-29-21761-66-8"); // ricerca con lettura dal disco !non funziona
-		archivioPublicazioni.cercaElemento(test3.getISBN());// ricerca senza lettura dal disco !funziona
+		archivioPublicazioni.cercaElemento(test3.getISBN());// ricerca senza lettura dal disco, funziona anche con
+															// lettura dal disco!funziona
 		System.out.println("ricerca per anno");
 		archivioPublicazioni.cercaElemento(2022);
 
