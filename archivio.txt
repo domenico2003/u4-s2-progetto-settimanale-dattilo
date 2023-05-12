@@ -1,20 +1,20 @@
 [{
- ISBN: 978-29-21761-66-8;
- titolo: titolo1;
- anno di publicazione: 2022;
+ ISBN: 978-93-09644-29-8;
+ titolo: one piece: capitolo 1;
+ anno di publicazione: 1999;
  numero pagine: 30;
- autore: autore;
- genere: genere;
+ autore: Eiichiro Oda;
+ genere: shonen;
 }, {
- ISBN: 978-89-20268-58-1;
- titolo: titolo2;
- anno di publicazione: 2024;
+ ISBN: 979-87-78720-46-1;
+ titolo: supernatural;
+ anno di publicazione: 2022;
  numero pagine: 63;
- autore: autore1;
- genere: genere1;
+ autore: Eric Kripke;
+ genere: horror;
 }, {
- ISBN: 979-07-72260-67-8;
- titolo: prova;
+ ISBN: 979-52-50578-58-0;
+ titolo: il messaggero;
  anno di publicazione: 2022;
  numero pagine: 100;
  periodicita: settimanale;

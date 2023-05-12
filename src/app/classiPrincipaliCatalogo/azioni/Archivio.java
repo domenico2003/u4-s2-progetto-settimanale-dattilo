@@ -53,9 +53,9 @@ public class Archivio {
 		System.out.println(risultati);
 	}
 
-	public static void salvaSulDisco(List<ProdottoCatalogo> archivio) {
+	public static void salvaSulDisco(Archivio archivio) {
 		try {
-			FileUtils.writeStringToFile(file, archivio.toString(), "UTF-8", true);
+			FileUtils.writeStringToFile(file, archivio.getArchivio().toString(), "UTF-8", false);
 		} catch (IOException e) {
 
 			System.out.println(e.getMessage());
@@ -82,7 +82,7 @@ public class Archivio {
 					int anno = Integer.parseInt(oggettoParametri[2].split(":")[1].split(" ")[1]);
 					int pagine = Integer.parseInt(oggettoParametri[3].split(":")[1].split(" ")[1]);
 					String autore = oggettoParametri[4].split(":")[1].split(" ")[1];
-					String genere = oggettoParametri[5].split(":")[1].split(" ")[1];
+					String genere = oggettoParametri[5].split(":")[1];
 					String isbn = oggettoParametri[0].split(":")[1].split(" ")[1];
 
 					Libro libroNuovo = new Libro(titolo, anno, pagine, autore, genere, isbn);

@@ -18,20 +18,26 @@ public class catalogoMain {
 			}
 		}
 
-		Rivista test1 = new Rivista("titolo", 2020, 30, Periodicita.mensile);
-		Libro test2 = new Libro("titolo1", 2022, 30, "autore", "genere");
-		Rivista test4 = new Rivista("prova", 2022, 100, Periodicita.settimanale);
+		Rivista test1 = new Rivista("il corriere dello sport", 2020, 30, Periodicita.mensile);
+		Libro test2 = new Libro("one piece: capitolo 1", 1999, 30, "Eiichiro Oda", "shonen");
+		Rivista test4 = new Rivista("il messaggero", 2022, 100, Periodicita.settimanale);
 
-		Libro test3 = new Libro("titolo2", 2024, 63, "autore1", "genere1");
+		Libro test3 = new Libro("supernatural", 2022, 63, "Eric Kripke", "horror");
 
 		Archivio archivioPublicazioni = new Archivio();
-		archivioPublicazioni.leggiDalDisco();
-//		archivioPublicazioni.aggiungiInAchivio(test1);
-//		archivioPublicazioni.aggiungiInAchivio(test2);
-//		archivioPublicazioni.aggiungiInAchivio(test3);
-//		archivioPublicazioni.aggiungiInAchivio(test4);
 
+		// leggo dal disco
+
+		// archivioPublicazioni.leggiDalDisco();
+
+		// aggiungo articoli
+
+		archivioPublicazioni.aggiungiInAchivio(test1);
+		archivioPublicazioni.aggiungiInAchivio(test2);
+		archivioPublicazioni.aggiungiInAchivio(test3);
+		archivioPublicazioni.aggiungiInAchivio(test4);
 		System.out.println("archivio originale ");
+		// stampo articolo
 		archivioPublicazioni.StampaArchivio();
 		System.out.println();
 		System.out.println(separatore);
@@ -52,8 +58,8 @@ public class catalogoMain {
 		// seguito
 
 		System.out.println("ricerca per ISBN");
-		archivioPublicazioni.cercaElemento("978-29-21761-66-8"); // ricerca con lettura dal disco
-//		archivioPublicazioni.cercaElemento(test3.getISBN());//ricerca senza lettura dal disco
+//		archivioPublicazioni.cercaElemento("978-29-21761-66-8"); // ricerca con lettura dal disco !non funziona
+		archivioPublicazioni.cercaElemento(test3.getISBN());// ricerca senza lettura dal disco !funziona
 		System.out.println("ricerca per anno");
 		archivioPublicazioni.cercaElemento(2022);
 
@@ -62,12 +68,13 @@ public class catalogoMain {
 		System.out.println();
 
 		System.out.println("ricerca tramite autore");
-		archivioPublicazioni.cercaTramiteAutore(" autore");
+		archivioPublicazioni.cercaTramiteAutore("Eiichiro Oda");
 
 		System.out.println();
 		System.out.println(separatore);
 		System.out.println();
-
+		// salvo sul disco
+		Archivio.salvaSulDisco(archivioPublicazioni);
 	}
 
 }
