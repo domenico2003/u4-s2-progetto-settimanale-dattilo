@@ -8,6 +8,11 @@ public class Rivista extends ProdottoCatalogo {
 		this.periodicita = periodi;
 	}
 
+	public Rivista(String titolo, int i, int pagine, Periodicita periodi, String ISBN) {
+		super(titolo, i, pagine, ISBN);
+		this.periodicita = periodi;
+	}
+
 	@Override
 	public String toString() {
 		return "{\n ISBN: " + this.getISBN() + ";\n titolo: " + this.getTitolo() + ";\n anno di publicazione: "

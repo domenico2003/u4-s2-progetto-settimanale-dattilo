@@ -1,0 +1,21 @@
+[{
+ ISBN: 978-29-21761-66-8;
+ titolo: titolo1;
+ anno di publicazione: 2022;
+ numero pagine: 30;
+ autore: autore;
+ genere: genere;
+}, {
+ ISBN: 978-89-20268-58-1;
+ titolo: titolo2;
+ anno di publicazione: 2024;
+ numero pagine: 63;
+ autore: autore1;
+ genere: genere1;
+}, {
+ ISBN: 979-07-72260-67-8;
+ titolo: prova;
+ anno di publicazione: 2022;
+ numero pagine: 100;
+ periodicita: settimanale;
+}]

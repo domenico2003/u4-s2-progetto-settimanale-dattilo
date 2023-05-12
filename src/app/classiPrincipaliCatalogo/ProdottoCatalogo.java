@@ -14,12 +14,23 @@ public abstract class ProdottoCatalogo {
 		setnPagine(pagine);
 	}
 
+	public ProdottoCatalogo(String titolo, int anno, int pagine, String ISBN) {
+		setTitolo(titolo);
+		setAnnoPublicazione(anno);
+		setnPagine(pagine);
+		setISBN(ISBN);
+	}
+
 	public String getTitolo() {
 		return titolo;
 	}
 
 	public void setTitolo(String titolo) {
 		this.titolo = titolo;
+	}
+
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
 	}
 
 	public int getAnnoPublicazione() {

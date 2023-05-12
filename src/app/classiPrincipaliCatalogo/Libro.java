@@ -10,6 +10,12 @@ public class Libro extends ProdottoCatalogo {
 		setGenere(genere);
 	}
 
+	public Libro(String titolo, int anno, int pagine, String autore, String genere, String ISBN) {
+		super(titolo, anno, pagine, ISBN);
+		setAutore(autore);
+		setGenere(genere);
+	}
+
 	public String getGenere() {
 		return genere;
 	}
